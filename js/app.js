@@ -1,543 +1,74 @@
-const menu = [
-  {
-    id: 1,
-    title: 'Chicken Leg Roast',
-    category: 'NV',
-    foodTime:'',
-    price: '',
-    img: '../img/chicken-leg-roast-1.jpg',
-    desc: '',
-  },
-  {
-    id: 2,
-    title: 'Black Pepper Chicken',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '../img/black-pepper-chicken.jpg',
-    desc: '',
-  },
-  {
-    id: 3,
-    title: 'Chicken Varutha Kari',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 4,
-    title: 'dindigul nattu kozhi kuzhambu',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 5,
-    title: 'chicken 65',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 6,
-    title: 'dindigul chilly chicken',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 7,
-    title: 'mutton kola urundai',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 8,
-    title: 'mutton nalli chops',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 9,
-    title: 'Brain with egg roast',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 10,
-    title: 'alfaham bbq',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 11,
-    title: 'afghani kabab',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 12,
-    title: 'pepper bbq',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 13,
-    title: 'prawns masala thokku',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 14,
-    title: 'nethili fish fry',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 15,
-    title: 'vanjiram roast',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 16,
-    title: 'tawa fish roast',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 17,
-    title: 'crab fry',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 18,
-    title: 'chicken biriyani',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 19,
-    title: 'egg biriyani',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 20,
-    title: 'chicken 65 biriyani',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 21,
-    title: 'mutton biriyani',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 22,
-    title: 'veg biriyani',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 23,
-    title: 'panner biriyani',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 24,
-    title: 'mushroom biriyani',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 25,
-    title: 'chicken fried rice',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 26,
-    title: 'veg noodles',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 27,
-    title: 'chicken noodles',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 28,
-    title: 'schezwan veg fried rice',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  v,
-  {
-    id: 29,
-    title: 'schezwan chicken fried rice',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 30,
-    title: 'madurai nenjukari chops kuzhambu',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 31,
-    title: 'thalappakatti mutton masala',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 32,
-    title: 'kodaikanal chicken kulambu',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 33,
-    title: 'nattu kozhi kuzhambu',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 34,
-    title: 'mushroom pepper fry',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 35,
-    title: 'tandoori mushrooms',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 36,
-    title: 'tandoori gobi',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 37,
-    title: 'panneer tikka',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 38,
-    title: 'veg pepper salt',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 39,
-    title: 'veg sheekh kabab',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 40,
-    title: 'baby corn muchurian',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 41,
-    title: 'mushroom masala',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 42,
-    title: 'kadai panner',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 43,
-    title: 'aloo gobi masala',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 44,
-    title: 'veg meals',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 45,
-    title: 'non veg meals',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 46,
-    title: 'veettu dosai',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 47,
-    title: 'mutton kari dosa',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 48,
-    title: 'egg dosai',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 49,
-    title: 'butter naan',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 50,
-    title: 'tandoori naan',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 51,
-    title: 'veg kothu parotta',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 52,
-    title: 'chicken kothu parotta',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 53,
-    title: 'chappathi',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 54,
-    title: 'parotta',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 55,
-    title: 'aattukaal paaya soup',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 56,
-    title: 'hot & sour veg soup',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 57,
-    title: 'milagu rasam soup',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 58,
-    title: 'naattukozhi soup',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 59,
-    title: 'chicken milagu soup',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  },
-  {
-    id: 60,
-    title: 'gun fire chicken',
-    category: '',
-    foodTime:'',
-    price: '',
-    img: '',
-    desc: '',
-  }
-]
+const http = new EasyHttp();
+
+
+ let jsondata;
+
+window.addEventListener("DOMContentLoaded", function (e) {
+  console.log("DOMContent loaded");
+  
+  // Get Menus
+  http
+    .get("menu.json")
+    .then(function (data) {
+      loadMenu(data);
+      jsondata = data;
+    })
+    .catch(function (err) {
+      console.error(err);
+    });
+
+
+});
+
+function loadMenu(data) {
+ 
+      var menuItems = '';
+      data.forEach(function (data) {
+        menuItems += `
+        <div class="menu-item">
+        <img src="${data.img}" alt="menu image">
+        <div class="item-content">
+          <ul>
+            <li class="item-name"> <h3> ${data.title} </h3> </li>
+            <li class="item-price"> <i class="fa-solid fa-indian-rupee-sign"></i> ${data.price} </li>
+          </ul>
+          <p class="item-description">
+            ${data.desc}
+          </p>      
+        </div>
+      </div>   
+        `
+        document.querySelector("#menu-content").innerHTML = menuItems;
+      
+      });
+    
+}
+
+
+// Filter Menu by Meal Time
+var btns = document.querySelectorAll('button');
+
+btns.forEach(function(btn) {
+
+  btn.addEventListener('click', function(e){
+    const className = e.currentTarget.classList.value;
+    console.log(className);
+   
+      console.log("jsondata", jsondata);
+      var menuByTime = jsondata.filter(function(item){
+        
+          return item.mealTime == className;
+        
+        console.log("menuByTime", menuByTime);
+      });
+
+      if(className == "all") {
+        loadMenu(jsondata);
+      } else {
+        console.log("menuByTime", menuByTime);
+        loadMenu(menuByTime);
+      }
+  
+  })
+
+})
